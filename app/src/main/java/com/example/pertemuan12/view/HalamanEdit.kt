@@ -32,6 +32,12 @@ fun EditSiswaScreen(
         },
         modifier = modifier
     ) { innerPadding ->
+        EntrySiswaBody(
+            uiStateSiswa = viewModel.uiStateSiswa,
+            onSiswaValueChange = viewModel::updateUiState,
+            onSaveClick = {},
+            modifier = Modifier.padding(innerPadding)
+        )
 
     }
 }
